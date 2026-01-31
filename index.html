@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Market Pulse • Agent Hub</title>
+  <meta name="description" content="Agent hub for Market Pulse. Pick an agent to open a full chat experience." />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <div class="container">
+    <section class="hero">
+      <span class="badge"><span class="dot"></span> Embedded chat is live • Agent Hub</span>
+      <h1>Market Pulse — pick an agent and chat full-screen.</h1>
+      <p>
+        This hub is designed to scale: each agent gets its own route/page so the embedded script loads only once per page.
+        Click a card to open a dedicated, big chat panel.
+      </p>
+      <div style="margin-top:18px; display:flex; gap:10px; flex-wrap:wrap;">
+        <a class="btn" href="./agents/market-pulse.html">Open Market Pulse</a>
+        <a class="btn secondary" href="./agents/salary-snapshot.html">Salary Snapshot</a>
+        <a class="btn secondary" href="./agents/skill-upgrade.html">Skill Upgrade</a>
+        <a class="btn secondary" href="./agents/job-match.html">Job Match</a>
+      </div>
+      <div style="margin-top:16px; color:var(--muted); display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+        <span class="badge">Tip: press <kbd>Esc</kbd> to close the sidebar on mobile</span>
+        <span class="badge">Design: clean, high-contrast, app-like</span>
+      </div>
+    </section>
+
+    <section class="grid">
+      <a class="card" href="./agents/market-pulse.html">
+        <span class="badge">Core • Market Intelligence</span>
+        <h3>Market Pulse</h3>
+        <p>Skills, roles, and salary signals—summarized fast, with actionable direction.</p>
+        <div class="meta">
+          <span><span class="pill"></span> Primary agent</span>
+          <span class="go">Open chat →</span>
+        </div>
+      </a>
+
+      <a class="card" href="./agents/salary-snapshot.html">
+        <span class="badge">Compensation</span>
+        <h3>Salary Snapshot</h3>
+        <p>Pay bands by role and location—clear, comparable, and decision-ready.</p>
+        <div class="meta">
+          <span><span class="pill"></span> Location-aware</span>
+          <span class="go">Open chat →</span>
+        </div>
+      </a>
+
+      <a class="card" href="./agents/skill-upgrade.html">
+        <span class="badge">Learning Plan</span>
+        <h3>Skill Upgrade</h3>
+        <p>Get a focused learning path: the shortest route to job-relevant skills.</p>
+        <div class="meta">
+          <span><span class="pill"></span> Structured roadmap</span>
+          <span class="go">Open chat →</span>
+        </div>
+      </a>
+
+      <a class="card" href="./agents/job-match.html">
+        <span class="badge">Discovery</span>
+        <h3>Job Match</h3>
+        <p>Find matching roles quickly—translate your current skills into target roles.</p>
+        <div class="meta">
+          <span><span class="pill"></span> Faster search</span>
+          <span class="go">Open chat →</span>
+        </div>
+      </a>
+    </section>
+  </div>
+</body>
+</html>

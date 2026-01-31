@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Market Pulse • Chat</title>
+  <meta name="description" content="Chat with the Market Pulse agent in a big, embedded UI." />
+  <link rel="stylesheet" href="../assets/styles.css" />
+</head>
+<body>
+  <div class="backdrop" data-backdrop></div>
+
+  <div class="shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div class="title">
+          <strong>Market Pulse</strong>
+          <small>Agent Hub</small>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Agents">
+        <a class="active" href="./market-pulse.html">
+          <span class="left"><span class="pill"></span> Market Pulse</span>
+          <span class="badge">Core</span>
+        </a>
+        <a class="" href="./salary-snapshot.html">
+          <span class="left"><span class="pill"></span> Salary Snapshot</span>
+          <span class="badge">Pay</span>
+        </a>
+        <a class="" href="./skill-upgrade.html">
+          <span class="left"><span class="pill"></span> Skill Upgrade</span>
+          <span class="badge">Plan</span>
+        </a>
+        <a class="" href="./job-match.html">
+          <span class="left"><span class="pill"></span> Job Match</span>
+          <span class="badge">Roles</span>
+        </a>
+      </nav>
+
+      <div class="footer">
+        <div class="badge"><span class="dot"></span> Embedded chat enabled</div>
+        <div>
+          <div style="margin-bottom:6px;">Good practice:</div>
+          <div style="color:var(--muted); line-height:1.4">
+            One agent per page keeps the embed script single-loaded and predictable.
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+      <header class="topbar">
+        <div class="left">
+          <button class="btn secondary mobile-toggle" data-sidebar-toggle aria-label="Toggle sidebar">
+            ☰
+          </button>
+          <div>
+            <h2>Market Pulse</h2>
+            <div class="sub">Skills • roles • salary signals</div>
+          </div>
+        </div>
+        <div class="right">
+          <a class="btn secondary" href="../index.html">← Back to hub</a>
+        </div>
+      </header>
+
+      <section class="content">
+        <div class="chat-panel">
+          <div id="chatMount" class="chat-mount"></div>
+        </div>
+
+        <aside class="side-panel" aria-label="Agent info">
+          <header>
+            <div>
+              <strong>How to use</strong><br/>
+              <small>Quick prompts</small>
+            </div>
+            <span class="badge">Core</span>
+          </header>
+          <div class="body">
+            <div>Ask about role trends, skill demand, and where salaries are moving.</div>
+            <ul>
+              <li>“What skills are trending for data engineers in 2026?”</li>
+<li>“Compare SRE vs DevOps demand in Texas.”</li>
+<li>“What’s the fastest path from SWE → PM?”</li>
+            </ul>
+            <div class="hint">
+              <strong>Pro tip:</strong> For best reliability, keep the Orchestrate embed script loaded only once per page.
+            </div>
+          </div>
+        </aside>
+      </section>
+    </main>
+  </div>
+
+  <div id="root" style="display:none"></div>
+
+  <script>
+    window.WXO_PAGE_CONFIG = {
+      orchestrationID: "4ad5443c7e9f401289c3ddae7579ffb6_2016f579-328c-4733-9a3e-194f465282a4",
+      hostURL: "https://au-syd.watson-orchestrate.cloud.ibm.com",
+      deploymentPlatform: "ibmcloud",
+      crn: "crn:v1:bluemix:public:watsonx-orchestrate:au-syd:a/4ad5443c7e9f401289c3ddae7579ffb6:2016f579-328c-4733-9a3e-194f465282a4::",
+      agentId: "108cf43e-1a3b-433c-87ac-b651b2250614",
+      agentEnvironmentId: "2c1c684c-a070-4945-b453-315f581ed28e",
+      chatMountId: "chatMount",
+
+      defaultLocale: "en",
+      showResetButton: true,
+      showAiDisclaimer: true,
+      showOrchestrateHeader: true,
+
+      style: {
+        headerColor: "0b0f17",
+        userMessageBackgroundColor: "7c5cff",
+        primaryColor: "2dd4bf",
+        showBackgroundGradient: false
+      }
+    };
+  </script>
+
+  <script src="../assets/wxo-embed.js"></script>
+  <script src="../assets/app.js"></script>
+</body>
+</html>
