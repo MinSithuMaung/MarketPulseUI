@@ -86,22 +86,8 @@ kbd{
 .hero{
   padding: 56px 0 28px;
 }
-.hero-title{
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin: 14px 0 12px;
-}
-.hero-logo-img{
-  width: 36px;
-  height: 36px;
-  border-radius: 12px;
-  object-fit: cover;
-  flex-shrink: 0;
-  box-shadow: 0 12px 30px rgba(0,0,0,.35);
-}
 .hero h1{
-  margin: 0;
+  margin: 14px 0 12px;
   font-size: clamp(2rem, 2.8vw, 3rem);
   letter-spacing: -0.03em;
   line-height: 1.05;
