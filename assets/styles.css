@@ -89,13 +89,33 @@ kbd{
 .hero-logo{
   margin-bottom: 24px;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
+  gap: 12px;
 }
-.hero-logo img{
-  max-width: 200px;
-  height: auto;
-  display: block;
+.hero-logo .logo-square{
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  /* Logo image */
+  background-image: url('./images/logo.png'), url('./images/logo.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+  flex-shrink: 0;
+}
+.hero-logo .logo-square::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 55%),
+              linear-gradient(135deg, rgba(124,92,255,1), rgba(45,212,191,1));
+  z-index: -1;
 }
 .hero h1{
   margin: 14px 0 12px;
@@ -179,15 +199,24 @@ kbd{
   width: 36px; height:36px;
   border-radius: 12px;
   position: relative;
-  /* Fallback gradient background */
-  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 55%),
-              linear-gradient(135deg, rgba(124,92,255,1), rgba(45,212,191,1));
-  /* Logo image on top */
+  overflow: hidden;
+  /* Logo image */
   background-image: url('./images/logo.png'), url('./images/logo.svg');
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  /* Fallback gradient background (shows if image doesn't load) */
+  background-color: transparent;
   box-shadow: 0 12px 30px rgba(0,0,0,.35);
+}
+.logo::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 55%),
+              linear-gradient(135deg, rgba(124,92,255,1), rgba(45,212,191,1));
+  z-index: -1;
 }
 .brand .title{
   display:flex; flex-direction:column;
