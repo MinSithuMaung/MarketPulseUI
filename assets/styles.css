@@ -86,6 +86,17 @@ kbd{
 .hero{
   padding: 56px 0 28px;
 }
+.hero-logo{
+  margin-bottom: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero-logo img{
+  max-width: 200px;
+  height: auto;
+  display: block;
+}
 .hero h1{
   margin: 14px 0 12px;
   font-size: clamp(2rem, 2.8vw, 3rem);
@@ -167,8 +178,15 @@ kbd{
 .logo{
   width: 36px; height:36px;
   border-radius: 12px;
+  position: relative;
+  /* Fallback gradient background */
   background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 55%),
               linear-gradient(135deg, rgba(124,92,255,1), rgba(45,212,191,1));
+  /* Logo image on top */
+  background-image: url('./images/logo.png'), url('./images/logo.svg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
   box-shadow: 0 12px 30px rgba(0,0,0,.35);
 }
 .brand .title{
