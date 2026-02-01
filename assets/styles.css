@@ -86,39 +86,22 @@ kbd{
 .hero{
   padding: 56px 0 28px;
 }
-.hero-logo{
-  margin-bottom: 24px;
+.hero-title{
   display: flex;
-  justify-content: flex-start;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
+  margin: 14px 0 12px;
 }
-.hero-logo .logo-square{
+.hero-logo-img{
   width: 36px;
   height: 36px;
   border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  /* Logo image */
-  background-image: url('./images/logo.png'), url('./images/logo.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-color: transparent;
-  box-shadow: 0 12px 30px rgba(0,0,0,.35);
+  object-fit: cover;
   flex-shrink: 0;
-}
-.hero-logo .logo-square::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 55%),
-              linear-gradient(135deg, rgba(124,92,255,1), rgba(45,212,191,1));
-  z-index: -1;
+  box-shadow: 0 12px 30px rgba(0,0,0,.35);
 }
 .hero h1{
-  margin: 14px 0 12px;
+  margin: 0;
   font-size: clamp(2rem, 2.8vw, 3rem);
   letter-spacing: -0.03em;
   line-height: 1.05;
@@ -198,25 +181,15 @@ kbd{
 .logo{
   width: 36px; height:36px;
   border-radius: 12px;
-  position: relative;
   overflow: hidden;
-  /* Logo image */
-  background-image: url('./images/logo.png'), url('./images/logo.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* Fallback gradient background (shows if image doesn't load) */
-  background-color: transparent;
+  flex-shrink: 0;
   box-shadow: 0 12px 30px rgba(0,0,0,.35);
 }
-.logo::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  border-radius: 12px;
-  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,.35), transparent 55%),
-              linear-gradient(135deg, rgba(124,92,255,1), rgba(45,212,191,1));
-  z-index: -1;
+.logo img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 .brand .title{
   display:flex; flex-direction:column;
